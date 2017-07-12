@@ -42,4 +42,8 @@ export class RecipeService{
 		return this.recipes.slice();
 		//slice used to provide a copy of the array not the exact one
 	}
+	
+	getRecipeDetails(id:number){
+		return this.recipes[id];
+	}
 }
