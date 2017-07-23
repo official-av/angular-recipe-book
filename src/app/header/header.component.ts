@@ -34,6 +34,5 @@ import { Router } from '@angular/router';
 	 
 	 onLogout(){
 		 this.authSvc.logout();
-		 this.router.navigate(['/signin']);
 	 }
  }
