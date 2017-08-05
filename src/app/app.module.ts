@@ -1,33 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RecipeService } from './recipes/recipes.service';
-import { ServerService } from './server.service';
-import { AuthService } from './auth/auth.service';
-import { ShoppingListService } from './shopping-list/shopping-list.service';
-import { AuthGuard } from './auth/auth-guard.service';
-import { HomeComponent } from './home/home.component';
-
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-		HeaderComponent,
-		HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
 		AppRoutingModule,
 		SharedModule,
-		AuthModule
+		AuthModule,
+		CoreModule
   ],
-  providers: [ShoppingListService,RecipeService,ServerService,AuthService,AuthGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
